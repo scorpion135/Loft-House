@@ -1,0 +1,57 @@
+.benefits {
+    position: relative;
+    padding: 120px 0;
+    overflow: hidden;
+    
+    
+    &__row {
+        display: flex;
+        column-gap: 70px;
+        justify-content: center;
+
+        @include mediaTablet {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+        }   
+    }
+
+    &::after {
+        content: "II";
+        left: calc(50% + 555px);
+        transform: translate(-50%, 0%);
+        @include decorNumber;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        margin-bottom: 30px;
+        // background-color: blue;
+
+        &-img {
+            padding-bottom: 53px;
+
+            @include mediaTablet {
+                width: 60px;
+                height: 60px;
+                // padding-bottom: 40px;
+                padding: 0 13px 40px 0
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 1.35;
+            font-family: $font-secondary;
+            font-weight: 300;
+            text-align: center;
+
+            @include mediaTablet {
+                font-size: 16px;
+            }
+        }
+    }
+}
